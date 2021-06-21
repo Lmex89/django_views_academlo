@@ -1,3 +1,0 @@
-#!/home/lmex89/Documents/Python/Django/backendtest/django_venv/bin/python3
-from numba.pycc import main
-main()
