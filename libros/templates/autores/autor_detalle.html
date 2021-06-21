@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {%if autor%}
+    <h2>
+        Autor id: {{autor.id}}
+    </h2>
+    <h2>
+        Autor Nombre {{autor.nombre}}
+    </h2>
+    <h2>
+        Edad {{autor.edad}}
+    </h2>
+    <h2>
+        Fecha de Publicacion : {{autor.fecha_de_publicacion}}
+    </h2>
+    {%else%}
+    <h2>
+        No existe ese id
+    </h2>
+    {%endif%}
+
+
+
+</body>
+</html>
+

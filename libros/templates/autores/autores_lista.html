@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        Lista de Autores
+    </h1>
+    <ul>
+        {%for autor in autores %}
+        <li>
+            <a href="{{autor.id}}">{{autor.nombre}}</a>
+        </li>
+        {%endfor %}
+    </ul>
+
+
+    <form method='POST' action="/autores/">
+        {% csrf_token %}
+        <div class="form-gruop">
+            <label for="nombre">
+                Nombre
+            </label>
+            <input type="text" class="form-control" name="nombre" placeholder="Juan">
+        </div>
+        <div class="form-gruop">
+            <label for="edad">
+                Edad
+            </label>
+            <input type="number" class="form-control" name="edad" placeholder="18">
+        </div>
+        <div class="form-gruop">
+            <label for="fecha_de_publicacion">
+                Edad
+            </label>
+            <input type="date" class="form-control" name="fecha_de_publicacion" placeholder="">
+        </div>
+        <div class="form-gruop">
+           <button type="submit" class="btn rounded-pill ">
+               Crear
+           </button>
+        </div>
+    </form>
+</body>
+</html>
